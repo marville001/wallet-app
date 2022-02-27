@@ -92,6 +92,13 @@ body {
     align-items: center;
     justify-content: center;
     padding: 100px 0px;
+    cursor: pointer;
+    user-select: none;
+}
+.create-block-container:active,
+.connectwalletbutton:active,
+.pd-container:active {
+    background-color: rgba(44, 44, 44, 0.58);
 }
 
 .create-block-container p {
@@ -107,7 +114,10 @@ body {
     box-shadow: 0px 4px 4px rgba(114, 114, 114, 0.25);
     padding: 20px;
     position: relative;
+    user-select: none;
+    cursor: pointer;
 }
+
 .pd-container .heading {
     color: #fff;
     display: flex;
