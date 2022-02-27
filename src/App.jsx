@@ -1,24 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
 import ConnectWalletButton from "./components/connectwalletbutton";
 import CreateBlockButton from "./components/CreateBlockButton";
 import ProjectDescription from "./components/projectdescription";
 
 const App = () => {
-    const contentRef = useRef(null);
-    const [show, setShow] = useState(false);
-
-    useEffect(() => {
-        if (contentRef.current) {
-            contentRef.current.addEventListener("scroll", () => {
-                const currentScroll = contentRef.current.scrollTop;
-                if (currentScroll > 90) {
-                    setShow(true);
-                } else {
-                    setShow(false);
-                }
-            });
-        }
-    }, []);
+    
     return (
         <div className="app">
             <ConnectWalletButton />
@@ -42,7 +27,6 @@ const App = () => {
                             />
                         </svg>
                     </div>
-                    {show && <div className="shadow"></div>}
                 </div>
                 <div className="content" ref={contentRef}>
                     <CreateBlockButton />
